@@ -14,7 +14,7 @@ struct BindingDemo: View {
             backgroundColor
             BindingDemoHere(backgroundColor : $backgroundColor)
         }
-       
+        
     }
 }
 

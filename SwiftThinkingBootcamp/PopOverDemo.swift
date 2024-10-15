@@ -38,9 +38,6 @@ struct PopOverDemo: View {
             }
         }
        
-        
-        
-        
 }
 }
 struct NewScreen: View{

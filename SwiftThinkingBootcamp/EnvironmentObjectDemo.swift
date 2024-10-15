@@ -6,10 +6,36 @@
 //
 
 import SwiftUI
+class EnvironmentViewModel : ObservableObject{
+    @Published var dataArray : [String] = []
+    init(){
+        getData()
+    }
+    func getData(){
+        self.dataArray.append(contentsOf: ["iphone","ipad","imac","AppleWatch"])
+    }
+}
 
 struct EnvironmentObjectDemo: View {
+    @StateObject var viewModel: EnvironmentViewModel = EnvironmentViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       NavigationView{
+           List{
+               ForEach(viewModel.dataArray, id: \.self){ item in
+                  NavigationLink(destination: Text("Destination"), label: {Text(item)})
+               }
+           }.navigationTitle("State Objects")
+       }
+    }
+}
+struct DetailView: View{
+    let selectedItem:
+    String
+    var body:some View{
+        ZStack{
+            Color.orange.ignoresSafeArea()
+            Text(selectedItem)
+        }
     }
 }
 

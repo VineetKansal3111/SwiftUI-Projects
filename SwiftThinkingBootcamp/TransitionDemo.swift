@@ -22,7 +22,6 @@ struct TransitionDemo: View {
                     .frame(height:UIScreen.main.bounds.height * 0.5)
                     .transition(.move(edge: .leading))
                     .animation(.easeInOut,value:showView)
-                
             }
         }
     }
