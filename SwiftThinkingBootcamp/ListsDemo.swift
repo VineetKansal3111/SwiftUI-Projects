@@ -19,7 +19,6 @@ struct ListsDemo: View {
                             Text("Fruits")     
                             Image(systemName: "flame.fill")
                                 .foregroundColor(Color.blue)
-                            
                         })
                 {
                     ForEach(fruits,id:\.self){ fruits in
@@ -36,7 +35,6 @@ struct ListsDemo: View {
                         .onDelete(perform: delete)
                         .onMove(perform: move)
                     }
-                
             }
             
             .listStyle(SidebarListStyle())

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81135CB62CBF8DB400043A55 /* QuickBillDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81135CB52CBF8DB400043A55 /* QuickBillDemo.swift */; };
 		81429EC32CB6414C0016782D /* AnimationsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81429EC22CB6414C0016782D /* AnimationsDemo.swift */; };
 		81429EC52CB64C670016782D /* AnimationCurvesDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81429EC42CB64C670016782D /* AnimationCurvesDemo.swift */; };
 		81429EC72CB6591F0016782D /* TransitionDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81429EC62CB6591F0016782D /* TransitionDemo.swift */; };
@@ -55,6 +56,7 @@
 		81FC63A12CB141CB0044F7F9 /* FramesDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC63A02CB141CB0044F7F9 /* FramesDemo.swift */; };
 		81FC63A32CB1485D0044F7F9 /* BackgroundOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC63A22CB1485D0044F7F9 /* BackgroundOverlays.swift */; };
 		81FC63A52CB165620044F7F9 /* VstackDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC63A42CB165620044F7F9 /* VstackDemo.swift */; };
+		81FEFD512CBFAE08007B9526 /* WatchlistDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FEFD502CBFAE08007B9526 /* WatchlistDemo.swift */; };
 		81FF0A892CB8E309005CB761 /* ToggleDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF0A882CB8E309005CB761 /* ToggleDemo.swift */; };
 		81FF0A8B2CB8E9FB005CB761 /* PickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF0A8A2CB8E9FB005CB761 /* PickerDemo.swift */; };
 		81FF0A8D2CB8F8E3005CB761 /* ColorPickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FF0A8C2CB8F8E3005CB761 /* ColorPickerDemo.swift */; };
@@ -84,6 +86,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81135CB52CBF8DB400043A55 /* QuickBillDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickBillDemo.swift; sourceTree = "<group>"; };
 		81429EC22CB6414C0016782D /* AnimationsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsDemo.swift; sourceTree = "<group>"; };
 		81429EC42CB64C670016782D /* AnimationCurvesDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCurvesDemo.swift; sourceTree = "<group>"; };
 		81429EC62CB6591F0016782D /* TransitionDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDemo.swift; sourceTree = "<group>"; };
@@ -135,6 +138,7 @@
 		81FC63A02CB141CB0044F7F9 /* FramesDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramesDemo.swift; sourceTree = "<group>"; };
 		81FC63A22CB1485D0044F7F9 /* BackgroundOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundOverlays.swift; sourceTree = "<group>"; };
 		81FC63A42CB165620044F7F9 /* VstackDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VstackDemo.swift; sourceTree = "<group>"; };
+		81FEFD502CBFAE08007B9526 /* WatchlistDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchlistDemo.swift; path = ../../../.Trash/WatchlistDemo.swift; sourceTree = "<group>"; };
 		81FF0A882CB8E309005CB761 /* ToggleDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleDemo.swift; sourceTree = "<group>"; };
 		81FF0A8A2CB8E9FB005CB761 /* PickerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDemo.swift; sourceTree = "<group>"; };
 		81FF0A8C2CB8F8E3005CB761 /* ColorPickerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerDemo.swift; sourceTree = "<group>"; };
@@ -172,9 +176,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81135CAF2CBF8C6700043A55 /* TotalBalanceUIDemo */ = {
+			isa = PBXGroup;
+			children = (
+				81FEFD502CBFAE08007B9526 /* WatchlistDemo.swift */,
+			);
+			path = TotalBalanceUIDemo;
+			sourceTree = "<group>";
+		};
+		81135CB42CBF8D8300043A55 /* QuickBillDemo */ = {
+			isa = PBXGroup;
+			children = (
+				81135CB52CBF8DB400043A55 /* QuickBillDemo.swift */,
+			);
+			path = QuickBillDemo;
+			sourceTree = "<group>";
+		};
 		81E6B8BE2CAFDC3A00AD66ED = {
 			isa = PBXGroup;
 			children = (
+				81135CB42CBF8D8300043A55 /* QuickBillDemo */,
+				81135CAF2CBF8C6700043A55 /* TotalBalanceUIDemo */,
 				81E6B8C92CAFDC3A00AD66ED /* SwiftThinkingBootcamp */,
 				81E6B8DA2CAFDC3B00AD66ED /* SwiftThinkingBootcampTests */,
 				81E6B8E42CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests */,
@@ -432,6 +454,7 @@
 				81E6B8F72CB0088200AD66ED /* ShapesBootcamp.swift in Sources */,
 				81CA17002CB5153D00CBFE9F /* SafeAreaDemo.swift in Sources */,
 				81E6B8CD2CAFDC3A00AD66ED /* ContentView.swift in Sources */,
+				81135CB62CBF8DB400043A55 /* QuickBillDemo.swift in Sources */,
 				81FF0A8F2CB8FD28005CB761 /* DatePickerDemo.swift in Sources */,
 				81CA16FE2CB5044500CBFE9F /* LazyVGridDemo.swift in Sources */,
 				81429EC52CB64C670016782D /* AnimationCurvesDemo.swift in Sources */,
@@ -465,6 +488,7 @@
 				816A1FE02CBCF6B9007ADF28 /* ModelDemo.swift in Sources */,
 				81E6B8F52CAFF30400AD66ED /* TextBootCamp.swift in Sources */,
 				81FF0A912CB90918005CB761 /* SteeperDemo.swift in Sources */,
+				81FEFD512CBFAE08007B9526 /* WatchlistDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

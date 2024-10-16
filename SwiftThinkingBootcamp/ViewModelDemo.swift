@@ -19,9 +19,9 @@ class FruitViewModel : ObservableObject{
         let fruit1 = FruitModel(name: "Oranges", count: 10)
         let fruit2 = FruitModel(name: "grap", count: 1)
         let fruit3 = FruitModel(name: "Apples", count: 10)
-        fruitArray.append(fruit1)
-        fruitArray.append(fruit2)
-        fruitArray.append(fruit3)
+        self.fruitArray.append(fruit1)
+        self.fruitArray.append(fruit2)
+        self.fruitArray.append(fruit3)
     }
     
     func delete(indexSet:IndexSet){
@@ -30,8 +30,8 @@ class FruitViewModel : ObservableObject{
 }
 
 struct ViewModelDemo: View {
-    //    @State var fruitArray : [FruitModel] = []
-    @ObservedObject var fruitViewModel: FruitViewModel = FruitViewModel ()
+    //  @State var fruitArray : [FruitModel] = []
+    @StateObject var fruitViewModel: FruitViewModel = FruitViewModel ()
     var body: some View {
         NavigationView{
             List{
@@ -43,14 +43,15 @@ struct ViewModelDemo: View {
                 }.onDelete(perform: fruitViewModel.delete)
             }
             .listStyle(GroupedListStyle())
+            .onAppear{
+                fruitViewModel.getFruits()
+            }
             .navigationBarItems(trailing: NavigationLink(
                 destination: EnvironmentDemo(), label: {
                     Image(systemName: "arrow.right")})
                 .font(.title))
             .navigationTitle("Fruits List")
-            .onAppear{
-                fruitViewModel.getFruits()
-            }
+            
         }
     }
 }
