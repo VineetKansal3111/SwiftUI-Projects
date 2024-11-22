@@ -10,7 +10,7 @@ struct UserModel : Identifiable{
     let id : String = UUID().uuidString
     let displayName : String
     let followerCount : Int
-    let userName : String
+    let userName : String
     let isVarified : Bool
 }
 

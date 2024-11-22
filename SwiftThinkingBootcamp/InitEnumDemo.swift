@@ -24,7 +24,6 @@ struct InitEnumDemo: View {
             self.title = "orange"
             self.backgroundcolor = .orange
         }
-        
     }
     enum Fruit{
         case apples
