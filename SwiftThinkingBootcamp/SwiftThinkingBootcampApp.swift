@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftThinkingBootcampApp: App {
     var body: some Scene {
         WindowGroup {
-            CreateListenMusicView()
+            MyIconsView(textFieldtext: "")
         }
     }
 }

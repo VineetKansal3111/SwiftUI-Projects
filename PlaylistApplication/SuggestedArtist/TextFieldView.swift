@@ -11,7 +11,6 @@ struct  TextFieldView: View {
     @Binding var textFieldtext: String
     
     var body: some View {
-        HStack{
             HStack{
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.white)
@@ -20,7 +19,6 @@ struct  TextFieldView: View {
                         .foregroundColor(.white)
                 })
                 
-               
                 if !textFieldtext.isEmpty{
                     Button( action: {
                         textFieldtext = ""
@@ -33,6 +31,4 @@ struct  TextFieldView: View {
             .padding()
             .background(Color.gray)
             .cornerRadius(15)
-            
-        }
     }}

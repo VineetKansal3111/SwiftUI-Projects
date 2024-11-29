@@ -61,7 +61,7 @@ struct SelectedArtistView: View {
             .foregroundColor(.white)
             .font(.system(size: 20))
             
-            TextFieldView( textFieldtext: $viewModel.textFieldtext)
+            TextFieldView(textFieldtext: $viewModel.textFieldtext)
                 .overlay(Color.black.opacity(0.01)
                     .onTapGesture {
                         isSelected = true

@@ -27,9 +27,12 @@ class CreateListenMusicViewModel: ObservableObject{
         "Sunset"
     ]
     @Published var selectedMood: String? = nil
+    
     @Published var selectedPlaylist: String? = nil
+    
     @Published  var columns =
         Array(repeating: GridItem(.flexible()), count: 3)
+    
     @Published var playlistColumns = Array(
         repeating: GridItem(.fixed(150)), count: 7
     )

@@ -18,12 +18,20 @@
 		810CC0E02CF05FB0003E964C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 810CC0DF2CF05FAC003E964C /* Assets.xcassets */; };
 		810CC0E22CF08880003E964C /* PAIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CC0E12CF08880003E964C /* PAIButton.swift */; };
 		810CC0E42CF09475003E964C /* CreateListenMusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CC0E32CF09475003E964C /* CreateListenMusicViewModel.swift */; };
+		810CC0E92CF0A00D003E964C /* MyIconsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CC0E82CF0A00D003E964C /* MyIconsView.swift */; };
+		810CC0EC2CF0A7A9003E964C /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CC0EB2CF0A7A9003E964C /* CoinCell.swift */; };
+		810CC0EE2CF0AEE4003E964C /* IconInCircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CC0ED2CF0AEE4003E964C /* IconInCircleCell.swift */; };
+		810FBFFC2CF5A1C00042872B /* AlertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FBFFB2CF5A1C00042872B /* AlertCell.swift */; };
+		810FC0002CF5B7600042872B /* AlertCellButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FBFFF2CF5B7600042872B /* AlertCellButtons.swift */; };
 		81135CB62CBF8DB400043A55 /* QuickBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81135CB52CBF8DB400043A55 /* QuickBillView.swift */; };
 		81429EC32CB6414C0016782D /* AnimationsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81429EC22CB6414C0016782D /* AnimationsDemo.swift */; };
 		81429EC52CB64C670016782D /* AnimationCurvesDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81429EC42CB64C670016782D /* AnimationCurvesDemo.swift */; };
 		81429EC72CB6591F0016782D /* TransitionDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81429EC62CB6591F0016782D /* TransitionDemo.swift */; };
 		81429EC92CB663730016782D /* PopUpSheetDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81429EC82CB663730016782D /* PopUpSheetDemo.swift */; };
 		81429ECB2CB66E090016782D /* PopOverDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81429ECA2CB66E090016782D /* PopOverDemo.swift */; };
+		8146F8532CF43EA80009D8F8 /* DialogueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146F8522CF43EA80009D8F8 /* DialogueCell.swift */; };
+		8146F8552CF467EA0009D8F8 /* MyIconsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146F8542CF467EA0009D8F8 /* MyIconsViewModel.swift */; };
+		8146F8572CF46C660009D8F8 /* IkonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8146F8562CF46C660009D8F8 /* IkonTextField.swift */; };
 		814B05C42CECAA3F00FD4CE2 /* SelectedArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814B05C32CECAA3F00FD4CE2 /* SelectedArtistView.swift */; };
 		816A1FDC2CBCDF63007ADF28 /* IfLetGuardDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A1FDB2CBCDF63007ADF28 /* IfLetGuardDemo.swift */; };
 		816A1FDE2CBCF0A5007ADF28 /* OnTapGasturesDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816A1FDD2CBCF0A5007ADF28 /* OnTapGasturesDemo.swift */; };
@@ -73,6 +81,8 @@
 		81F9AF9B2CCB72E200CC0869 /* AppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9AF9A2CCB72E200CC0869 /* AppStorage.swift */; };
 		81F9AFA02CCB8B6200CC0869 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9AF9F2CCB8B6200CC0869 /* IntroView.swift */; };
 		81F9AFA22CCB982200CC0869 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F9AFA12CCB982200CC0869 /* OnboardingView.swift */; };
+		81FC3F0D2CF9872100D64B99 /* ikonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC3F0C2CF9872100D64B99 /* ikonInfo.swift */; };
+		81FC3F0F2CF9B45200D64B99 /* FilterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC3F0E2CF9B45200D64B99 /* FilterInfo.swift */; };
 		81FC639B2CB1134D0044F7F9 /* GradientBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC639A2CB1134D0044F7F9 /* GradientBootcamp.swift */; };
 		81FC639D2CB1254B0044F7F9 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC639C2CB1254B0044F7F9 /* Icons.swift */; };
 		81FC639F2CB12ECF0044F7F9 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FC639E2CB12ECF0044F7F9 /* Images.swift */; };
@@ -121,12 +131,20 @@
 		810CC0DF2CF05FAC003E964C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		810CC0E12CF08880003E964C /* PAIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAIButton.swift; sourceTree = "<group>"; };
 		810CC0E32CF09475003E964C /* CreateListenMusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListenMusicViewModel.swift; sourceTree = "<group>"; };
+		810CC0E82CF0A00D003E964C /* MyIconsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIconsView.swift; sourceTree = "<group>"; };
+		810CC0EB2CF0A7A9003E964C /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
+		810CC0ED2CF0AEE4003E964C /* IconInCircleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconInCircleCell.swift; sourceTree = "<group>"; };
+		810FBFFB2CF5A1C00042872B /* AlertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCell.swift; sourceTree = "<group>"; };
+		810FBFFF2CF5B7600042872B /* AlertCellButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCellButtons.swift; sourceTree = "<group>"; };
 		81135CB52CBF8DB400043A55 /* QuickBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickBillView.swift; sourceTree = "<group>"; };
 		81429EC22CB6414C0016782D /* AnimationsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsDemo.swift; sourceTree = "<group>"; };
 		81429EC42CB64C670016782D /* AnimationCurvesDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCurvesDemo.swift; sourceTree = "<group>"; };
 		81429EC62CB6591F0016782D /* TransitionDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDemo.swift; sourceTree = "<group>"; };
 		81429EC82CB663730016782D /* PopUpSheetDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpSheetDemo.swift; sourceTree = "<group>"; };
 		81429ECA2CB66E090016782D /* PopOverDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverDemo.swift; sourceTree = "<group>"; };
+		8146F8522CF43EA80009D8F8 /* DialogueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogueCell.swift; sourceTree = "<group>"; };
+		8146F8542CF467EA0009D8F8 /* MyIconsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIconsViewModel.swift; sourceTree = "<group>"; };
+		8146F8562CF46C660009D8F8 /* IkonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkonTextField.swift; sourceTree = "<group>"; };
 		814B05C32CECAA3F00FD4CE2 /* SelectedArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedArtistView.swift; sourceTree = "<group>"; };
 		816A1FDB2CBCDF63007ADF28 /* IfLetGuardDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfLetGuardDemo.swift; sourceTree = "<group>"; };
 		816A1FDD2CBCF0A5007ADF28 /* OnTapGasturesDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTapGasturesDemo.swift; sourceTree = "<group>"; };
@@ -179,6 +197,8 @@
 		81F9AF9A2CCB72E200CC0869 /* AppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorage.swift; sourceTree = "<group>"; };
 		81F9AF9F2CCB8B6200CC0869 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		81F9AFA12CCB982200CC0869 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		81FC3F0C2CF9872100D64B99 /* ikonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ikonInfo.swift; sourceTree = "<group>"; };
+		81FC3F0E2CF9B45200D64B99 /* FilterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInfo.swift; sourceTree = "<group>"; };
 		81FC639A2CB1134D0044F7F9 /* GradientBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBootcamp.swift; sourceTree = "<group>"; };
 		81FC639C2CB1254B0044F7F9 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		81FC639E2CB12ECF0044F7F9 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -245,6 +265,31 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		810CC0E72CF09FEA003E964C /* MyIconsApp */ = {
+			isa = PBXGroup;
+			children = (
+				810CC0EA2CF0A790003E964C /* Components */,
+				810CC0E82CF0A00D003E964C /* MyIconsView.swift */,
+				8146F8542CF467EA0009D8F8 /* MyIconsViewModel.swift */,
+				81FC3F0C2CF9872100D64B99 /* ikonInfo.swift */,
+				81FC3F0E2CF9B45200D64B99 /* FilterInfo.swift */,
+			);
+			path = MyIconsApp;
+			sourceTree = "<group>";
+		};
+		810CC0EA2CF0A790003E964C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				810CC0EB2CF0A7A9003E964C /* CoinCell.swift */,
+				810CC0ED2CF0AEE4003E964C /* IconInCircleCell.swift */,
+				8146F8522CF43EA80009D8F8 /* DialogueCell.swift */,
+				8146F8562CF46C660009D8F8 /* IkonTextField.swift */,
+				810FBFFB2CF5A1C00042872B /* AlertCell.swift */,
+				810FBFFF2CF5B7600042872B /* AlertCellButtons.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		81135CB42CBF8D8300043A55 /* QuickBillDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,7 +325,6 @@
 		81E34CD62CCF602900B298C9 /* PlaylistApplication */ = {
 			isa = PBXGroup;
 			children = (
-				810CC0DF2CF05FAC003E964C /* Assets.xcassets */,
 				8108ACA32CEF214400CAFC25 /* MoodPage */,
 				814B05C02CECA3D100FD4CE2 /* SuggestedArtist */,
 				81E34CE02CCF76A300B298C9 /* Components */,
@@ -322,6 +366,8 @@
 		81E6B8BE2CAFDC3A00AD66ED = {
 			isa = PBXGroup;
 			children = (
+				810CC0DF2CF05FAC003E964C /* Assets.xcassets */,
+				810CC0E72CF09FEA003E964C /* MyIconsApp */,
 				81E34CD62CCF602900B298C9 /* PlaylistApplication */,
 				81F9AF9E2CCB8ADC00CC0869 /* OnboardingVideo */,
 				81135CB42CBF8D8300043A55 /* QuickBillDemo */,
@@ -573,11 +619,14 @@
 			files = (
 				816EFCFC2CB3EE340075A122 /* InitEnumDemo.swift in Sources */,
 				81D5FF372CB3B1F20063A323 /* PaddingDemo.swift in Sources */,
+				810FC0002CF5B7600042872B /* AlertCellButtons.swift in Sources */,
+				810CC0EE2CF0AEE4003E964C /* IconInCircleCell.swift in Sources */,
 				81FF0A8B2CB8E9FB005CB761 /* PickerDemo.swift in Sources */,
 				81CA16FC2CB4F62000CBFE9F /* ScrollView.swift in Sources */,
 				818833D22CB7AD040022C412 /* AlertDemo.swift in Sources */,
 				8108ACA82CEF21C800CAFC25 /* IconTitleView.swift in Sources */,
 				8108AC9A2CEF02D300CAFC25 /* ThreeButtonsView.swift in Sources */,
+				81FC3F0D2CF9872100D64B99 /* ikonInfo.swift in Sources */,
 				81429EC32CB6414C0016782D /* AnimationsDemo.swift in Sources */,
 				81FC63A52CB165620044F7F9 /* VstackDemo.swift in Sources */,
 				81CA17022CB51AF800CBFE9F /* ButtonDemo.swift in Sources */,
@@ -588,6 +637,8 @@
 				81FF0A9C2CB94F25005CB761 /* OnAppearDemo.swift in Sources */,
 				81E34CDD2CCF62A600B298C9 /* PlaylistAI.swift in Sources */,
 				81FC639D2CB1254B0044F7F9 /* Icons.swift in Sources */,
+				810FBFFC2CF5A1C00042872B /* AlertCell.swift in Sources */,
+				810CC0E92CF0A00D003E964C /* MyIconsView.swift in Sources */,
 				816A1FE42CBD3322007ADF28 /* EnvironmentObjectDemo.swift in Sources */,
 				81E6B8F92CB0135D00AD66ED /* ColorsBootcamp.swift in Sources */,
 				8180EA562CD6396C006A4DF8 /* CustomizedPlaylist.swift in Sources */,
@@ -597,6 +648,7 @@
 				8108AC9E2CEF0BC800CAFC25 /* NameCell.swift in Sources */,
 				81E6B8CD2CAFDC3A00AD66ED /* ContentView.swift in Sources */,
 				81AADBE42CCFAE0800DEA784 /* ColoredBoxUIHelp.swift in Sources */,
+				8146F8572CF46C660009D8F8 /* IkonTextField.swift in Sources */,
 				81135CB62CBF8DB400043A55 /* QuickBillView.swift in Sources */,
 				81FF0A8F2CB8FD28005CB761 /* DatePickerDemo.swift in Sources */,
 				8108ACAA2CEF2BB900CAFC25 /* TextFieldView.swift in Sources */,
@@ -615,6 +667,7 @@
 				81FC639F2CB12ECF0044F7F9 /* Images.swift in Sources */,
 				8108AC9C2CEF040D00CAFC25 /* SelectedArtistViewModel.swift in Sources */,
 				81F9AFA22CCB982200CC0869 /* OnboardingView.swift in Sources */,
+				8146F8552CF467EA0009D8F8 /* MyIconsViewModel.swift in Sources */,
 				818833DA2CB7F05A0022C412 /* TextFieldDemo.swift in Sources */,
 				81FF0A972CB9324A005CB761 /* PageTabViewDemo.swift in Sources */,
 				81FC639B2CB1134D0044F7F9 /* GradientBootcamp.swift in Sources */,
@@ -622,6 +675,7 @@
 				818833D62CB7D1310022C412 /* ActionSheetDemo.swift in Sources */,
 				81CA170A2CB5443800CBFE9F /* ExtractedFunctionDemo.swift in Sources */,
 				816EFCFE2CB407560075A122 /* ForEachLoops.swift in Sources */,
+				8146F8532CF43EA80009D8F8 /* DialogueCell.swift in Sources */,
 				81CA170E2CB5555E00CBFE9F /* BindingDemo.swift in Sources */,
 				81429EC72CB6591F0016782D /* TransitionDemo.swift in Sources */,
 				81E34CE92CCF9B2300B298C9 /* WelcomePlaylistAi.swift in Sources */,
@@ -636,6 +690,7 @@
 				818833D82CB7E4CE0022C412 /* ContextMenuDemo.swift in Sources */,
 				816EFD002CB40AF00075A122 /* ArrayDemo.swift in Sources */,
 				81FF0A952CB918B4005CB761 /* TabViewDemo.swift in Sources */,
+				810CC0EC2CF0A7A9003E964C /* CoinCell.swift in Sources */,
 				81CA17082CB5396D00CBFE9F /* StateDemo.swift in Sources */,
 				810CC0D92CF053A5003E964C /* FerrryCell.swift in Sources */,
 				81F9AFA02CCB8B6200CC0869 /* IntroView.swift in Sources */,
@@ -645,6 +700,7 @@
 				8180EA5D2CD64BFF006A4DF8 /* EasilyCreatePlaylist.swift in Sources */,
 				810CC0E42CF09475003E964C /* CreateListenMusicViewModel.swift in Sources */,
 				816A1FE02CBCF6B9007ADF28 /* ModelDemo.swift in Sources */,
+				81FC3F0F2CF9B45200D64B99 /* FilterInfo.swift in Sources */,
 				81E6B8F52CAFF30400AD66ED /* TextBootCamp.swift in Sources */,
 				8108ACAC2CEF50EC00CAFC25 /* EmojiCell.swift in Sources */,
 				81FF0A912CB90918005CB761 /* SteeperDemo.swift in Sources */,

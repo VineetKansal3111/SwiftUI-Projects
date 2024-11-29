@@ -36,7 +36,7 @@ struct AlertDemo: View {
 //                    alertdiscription = "video upload"
                 }
             }
-            .alert(isPresented: $showAlert , content: {
+            .alert(isPresented: $showAlert, content: {
                 getalert()
             })
         }}

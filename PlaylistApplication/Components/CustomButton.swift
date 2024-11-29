@@ -13,20 +13,16 @@ struct CustomButton: View {
     var height: CGFloat
     var buttonColor : Color
     var title: String
-    
-    
-    
+
     var body: some View {
-       
-            Text(title)
-                .frame(maxWidth: width, maxHeight: height)
-                .foregroundColor(.white)
-                .background(buttonColor)
-                .cornerRadius(10)
-                .shadow(radius: 5)
-                .bold()
         
-        
+        Text(title)
+            .frame(maxWidth: width, maxHeight: height)
+            .foregroundColor(.white)
+            .background(buttonColor)
+            .cornerRadius(10)
+            .shadow(radius: 5)
+            .bold()
     }
 }
 

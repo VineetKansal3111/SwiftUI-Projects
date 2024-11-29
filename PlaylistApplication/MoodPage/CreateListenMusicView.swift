@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreateListenMusicView: View {
     @StateObject private var viewModel = CreateListenMusicViewModel()
-
+    
     var body: some View {
         VStack(spacing:0){
             IconTitleView()
@@ -46,8 +46,6 @@ struct CreateListenMusicView: View {
                     }
                 }
                 Spacer()
-                
-                
             }
             .padding(.horizontal)
             .frame(maxHeight: .infinity,alignment: .top)
