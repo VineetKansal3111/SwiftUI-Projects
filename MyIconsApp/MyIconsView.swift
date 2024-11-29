@@ -10,42 +10,9 @@ import SwiftUI
 struct MyIconsView: View {
     
     @StateObject var viewModel = MyIconsViewModel()
-    @State var textFieldtext: String
-   
-
-    var filteredNames: [ikonInfo] {
-        var filteredArray = viewModel.dialogueCellArray
-        
-        if viewModel.selectedFilter.contains(where: { $0.title == "My Favourites" }) {
-            filteredArray = filteredArray.filter { $0.isFavourite }
-        }
-        
-        if !textFieldtext.isEmpty {
-            filteredArray = filteredArray.filter {
-                $0.City.lowercased().contains(textFieldtext.lowercased())
-            }
-        }
-        
-        if viewModel.selectedFilter.contains(where: { $0.title == "Low To High Level" }) {
-            filteredArray = filteredArray.sorted { $0.level < $1.level }
-        }
-        
-        if viewModel.selectedFilter.contains(where: {$0.title == "High To Low Level"}){
-            filteredArray = filteredArray.sorted { $0.level > $1.level }
-        }
-        
-        if viewModel.selectedFilter.contains(where: {$0.title == "By Language"}){
-            filteredArray = filteredArray.sorted { $0.City < $1.City }
-        }
-        
-        
-        return filteredArray
-    }
-    
     
     var body: some View {
         ZStack{
-            
             ScrollView{
                 VStack{
                     CoinCell()
@@ -55,7 +22,7 @@ struct MyIconsView: View {
                         .foregroundColor(.white)
                         .padding(.vertical,10)
                     if viewModel.searchSelected == true {
-                        IkonTextField(textFieldText: $textFieldtext)
+                        IkonTextField(textFieldText: $viewModel.textFieldtext)
                             .padding(.bottom)
                     }
                     else{
@@ -72,18 +39,16 @@ struct MyIconsView: View {
                     }
                     
                     LazyVGrid(columns: viewModel.columns, spacing: 10) {
-                        ForEach(filteredNames) { item in
+                        ForEach(viewModel.filteredNames) { item in
                             if let index = viewModel.dialogueCellArray.firstIndex(where: { $0.id == item.id }) {
                                 DialogueCell(object: viewModel.dialogueCellArray[index], onFavoriteTap: {
                                     viewModel.dialogueCellArray[index].isFavourite.toggle()
                                 })
-                                
                             }
                         }
                         Spacer()
                     }
                 }
-               
             }
             if(viewModel.showAlert == true) {
                 VStack{
@@ -124,7 +89,7 @@ struct MyIconsView: View {
                         AlertCellButtons(title: "CONFIRM", bgColor: .purple,onTap: {
                             for sf in viewModel.selectedFilter {
                                 if  sf.title == "My Favourites" {
-                             let filteredFavorites = viewModel.dialogueCellArray.filter { $0.isFavourite }
+                                    let filteredFavorites = viewModel.dialogueCellArray.filter { $0.isFavourite }
                                 }
                                 print(sf.title)
                                 viewModel.showAlert = false
@@ -149,9 +114,9 @@ struct MyIconsView: View {
                 .background(.opacity(0.7))
             }
         }
-      .background(Image("bgGradientImg"))
-      .edgesIgnoringSafeArea(.all)
-      
+        .background(Image("bgGradientImg"))
+        .edgesIgnoringSafeArea(.all)
+        
         .onChange(of: viewModel.dialogueCellArray, perform: { array in
             print(array)
         })
@@ -161,6 +126,6 @@ struct MyIconsView: View {
 
 struct MyIconsView_Previews: PreviewProvider {
     static var previews: some View {
-        MyIconsView(textFieldtext: "")
+        MyIconsView()
     }
 }

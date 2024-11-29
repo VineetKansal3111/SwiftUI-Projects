@@ -21,7 +21,6 @@
 		810CC0E92CF0A00D003E964C /* MyIconsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CC0E82CF0A00D003E964C /* MyIconsView.swift */; };
 		810CC0EC2CF0A7A9003E964C /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CC0EB2CF0A7A9003E964C /* CoinCell.swift */; };
 		810CC0EE2CF0AEE4003E964C /* IconInCircleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810CC0ED2CF0AEE4003E964C /* IconInCircleCell.swift */; };
-		810FBFFC2CF5A1C00042872B /* AlertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FBFFB2CF5A1C00042872B /* AlertCell.swift */; };
 		810FC0002CF5B7600042872B /* AlertCellButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810FBFFF2CF5B7600042872B /* AlertCellButtons.swift */; };
 		81135CB62CBF8DB400043A55 /* QuickBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81135CB52CBF8DB400043A55 /* QuickBillView.swift */; };
 		81429EC32CB6414C0016782D /* AnimationsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81429EC22CB6414C0016782D /* AnimationsDemo.swift */; };
@@ -134,7 +133,6 @@
 		810CC0E82CF0A00D003E964C /* MyIconsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIconsView.swift; sourceTree = "<group>"; };
 		810CC0EB2CF0A7A9003E964C /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
 		810CC0ED2CF0AEE4003E964C /* IconInCircleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconInCircleCell.swift; sourceTree = "<group>"; };
-		810FBFFB2CF5A1C00042872B /* AlertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCell.swift; sourceTree = "<group>"; };
 		810FBFFF2CF5B7600042872B /* AlertCellButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCellButtons.swift; sourceTree = "<group>"; };
 		81135CB52CBF8DB400043A55 /* QuickBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickBillView.swift; sourceTree = "<group>"; };
 		81429EC22CB6414C0016782D /* AnimationsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsDemo.swift; sourceTree = "<group>"; };
@@ -284,7 +282,6 @@
 				810CC0ED2CF0AEE4003E964C /* IconInCircleCell.swift */,
 				8146F8522CF43EA80009D8F8 /* DialogueCell.swift */,
 				8146F8562CF46C660009D8F8 /* IkonTextField.swift */,
-				810FBFFB2CF5A1C00042872B /* AlertCell.swift */,
 				810FBFFF2CF5B7600042872B /* AlertCellButtons.swift */,
 			);
 			path = Components;
@@ -637,7 +634,6 @@
 				81FF0A9C2CB94F25005CB761 /* OnAppearDemo.swift in Sources */,
 				81E34CDD2CCF62A600B298C9 /* PlaylistAI.swift in Sources */,
 				81FC639D2CB1254B0044F7F9 /* Icons.swift in Sources */,
-				810FBFFC2CF5A1C00042872B /* AlertCell.swift in Sources */,
 				810CC0E92CF0A00D003E964C /* MyIconsView.swift in Sources */,
 				816A1FE42CBD3322007ADF28 /* EnvironmentObjectDemo.swift in Sources */,
 				81E6B8F92CB0135D00AD66ED /* ColorsBootcamp.swift in Sources */,

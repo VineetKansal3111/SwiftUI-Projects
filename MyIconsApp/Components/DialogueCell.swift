@@ -25,7 +25,7 @@ struct DialogueCell: View {
                                         .overlay(
                                             Image(systemName:object.isFavourite ? "heart.fill" : "heart")
                                                 .resizable()
-                                                .foregroundColor(.pink)
+                                                .foregroundColor(object.isFavourite ? .pink : .white)
                                                 .frame(width: 15.5,height:13)
                                                 .onTapGesture {
                                                     onFavoriteTap()
