@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct MyIconsView: View {
+struct MyIkonsView: View {
     
-    @StateObject var viewModel = MyIconsViewModel()
+    @StateObject var viewModel = MyIkonsViewModel()
     
     var body: some View {
         ZStack{
-            ScrollView{
+            ScrollView(showsIndicators: false){
                 VStack{
-                    CoinCell()
+                    CoinCell(isSelectedCoin: false)
                         .padding(.top,40)
                     Text("Select an Ikon to chat")
                         .font(.system(size: 18,weight: .semibold))
@@ -52,27 +52,29 @@ struct MyIconsView: View {
             }
             if(viewModel.showAlert == true) {
                 VStack{
-                    HStack{
-                        Text("Filter")
-                            .font(.system(size: 25,weight: .bold))
-                            .frame(maxWidth: .infinity,alignment:.center)
-                        
-                        Button(action: {
-                            viewModel.showAlert = false
-                        }, label: {
-                            Image(systemName: "xmark.circle")
-                                .font(.system(size: 30))
-                                .frame(maxWidth: .infinity,alignment: .trailing)
-                        })
-                    }
-                    .foregroundColor(.white)
-                    .padding()
+                    Text("Filter")
+                        .font(.system(size: 25,weight: .bold))
+                        .frame(maxWidth: .infinity,alignment:.center)
+                        .foregroundColor(.white)
+                        .padding()
+                        .overlay(
+                            Button(action: {
+                                viewModel.showAlert = false
+                            }, label: {
+                                Image(systemName: "xmark.circle")
+                                    .font(.system(size: 30))
+                                    .frame(maxWidth: .infinity,alignment: .trailing)
+                            })
+                        )
+                    
+                        .foregroundColor(.white)
+                        .padding()
                     LazyVGrid(columns: viewModel.columns,spacing: 10) {
                         ForEach(FilterInfo.array){ filter in
                             HStack{
                                 Image(systemName: viewModel.selectedFilter.contains(filter) ? "rectangle.fill" : "rectangle")
                                     .onTapGesture{
-                                        viewModel.addGenre(genre: filter)
+                                        viewModel.addGenre(Filter: filter)
                                         print(viewModel.addGenre)
                                         print(viewModel.selectedFilter)
                                     }
@@ -101,7 +103,6 @@ struct MyIconsView: View {
                     }
                     .padding()
                     .frame(maxWidth: .infinity,alignment: .center)
-                    
                 }
                 .padding()
                 .background(Color.black)
@@ -126,6 +127,6 @@ struct MyIconsView: View {
 
 struct MyIconsView_Previews: PreviewProvider {
     static var previews: some View {
-        MyIconsView()
+        MyIkonsView()
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class MyIconsViewModel: ObservableObject{
+class MyIkonsViewModel: ObservableObject{
     
     @Published var textFieldtext: String = ""
     @Published var searchSelected : Bool = false
@@ -16,7 +16,7 @@ class MyIconsViewModel: ObservableObject{
     var columns = Array(repeating: GridItem(.flexible(minimum: 150, maximum: 200)), count: 2)
     @State var isSelected: Bool = false
     var columnsSecond = Array(repeating: GridItem(.flexible()), count: 2)
-    var onTap: ()->() = {}
+   
     
     @Published var dialogueCellArray : [ikonInfo] = [
         ikonInfo(artWorks: "artWork1", artWorkNames: "LINDA", level: "27", City: "American", isFavourite: false),
@@ -29,13 +29,14 @@ class MyIconsViewModel: ObservableObject{
     
     @Published var selectedFilter : [FilterInfo] = []
     
-    func addGenre(genre: FilterInfo) {
-        if selectedFilter.contains(genre) {
-            selectedFilter.removeAll { $0 == genre }
+    func addGenre(Filter: FilterInfo) {
+        if selectedFilter.contains(Filter) {
+            selectedFilter.removeAll { $0 == Filter }
         } else {
-            selectedFilter.append(genre)
+            selectedFilter.append(Filter)
         }
     }
+    
     var filteredNames: [ikonInfo] {
         var filteredArray = dialogueCellArray
         
@@ -61,29 +62,7 @@ class MyIconsViewModel: ObservableObject{
             filteredArray = filteredArray.sorted { $0.City < $1.City }
         }
         
-        
         return filteredArray
     }
-
-//    func allFilters(ikonInfo:[ikonInfo])-> [ikonInfo] {
-//        
-//        let isMyFavouritesSelected = selectedFilter.contains { $0.title == "My Favourites" }
-//            let isLowToHighSelected = selectedFilter.contains { $0.title == "Low To High Level" }
-//            
-//            if isMyFavouritesSelected {
-//                return dialogueCellArray.filter { $0.isFavourite }
-//            }
-//        else if isLowToHighSelected {
-//            return dialogueCellArray.sorted { $0.level < $1.level }
-//        }
-//            else if !$textFieldtext.isEmpty {
-//                return dialogueCellArray.filter {
-//                    $0.City.lowercased().contains($textFieldtext.lowercased())
-//                }
-//            }
-//        else {
-//                return dialogueCellArray
-//            }
-//    }
     
 }

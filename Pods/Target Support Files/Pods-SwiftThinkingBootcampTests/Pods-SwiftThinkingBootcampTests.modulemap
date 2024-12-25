@@ -1,0 +1,6 @@
+framework module Pods_SwiftThinkingBootcampTests {
+  umbrella header "Pods-SwiftThinkingBootcampTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

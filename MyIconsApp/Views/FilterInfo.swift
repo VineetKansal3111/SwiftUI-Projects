@@ -14,7 +14,7 @@ struct FilterInfo:Identifiable,Equatable{
     
     static var array : [FilterInfo] = [
         FilterInfo(title: "My Favourites", isSelected: false),
-        FilterInfo(title: "Low To High Level", isSelected: false),
+        FilterInfo(title: "Low To High Level", isSelected:false),
         FilterInfo(title: "High To Low Level", isSelected: false),
         FilterInfo(title: "For Rent", isSelected: false),
         FilterInfo(title: "On Sale", isSelected: false),
