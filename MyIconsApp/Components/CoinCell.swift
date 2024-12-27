@@ -19,6 +19,9 @@ struct CoinCell: View {
                         Image("starImg")
                         Text("100")
                         Image("arrowRight")
+                            .onTapGesture {
+                                isSelectedCoin = true
+                            }
                     }
                     .padding(2)
                     .background(Color.white)
@@ -28,10 +31,6 @@ struct CoinCell: View {
                 Spacer()
                 Image("Subtract")
             }
-            .onTapGesture {
-                isSelectedCoin = true
-            }
-           
             .padding()
             
             if(isSelectedCoin == false){
@@ -58,7 +57,6 @@ struct CoinCell: View {
                 .cornerRadius(20)
                 .frame(maxWidth:.infinity,alignment: .trailing)
                 .padding(.horizontal,50)
-
             }
         }
     }

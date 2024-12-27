@@ -49,7 +49,7 @@ struct DialogueCell: View {
                         
                         Text(object.artWorkNames)
                             .font(.system(size: 16,weight: .semibold))
-                            .foregroundColor(Color("app.9B9B9B"))
+                            .foregroundColor(Color("app9B9B9B"))
                             .padding(.bottom,4)
                         
                         HStack(spacing:10){
@@ -65,7 +65,7 @@ struct DialogueCell: View {
                                 Text(object.City)
                             }
                             .font(.system(size: 10,weight: .semibold))
-                            .foregroundColor(Color("app.E4FF1A"))
+                            .foregroundColor(Color("appE4FF1A"))
                         }
                     }
                 )
@@ -77,7 +77,7 @@ struct DialogueCell: View {
 
 //struct DialogueCell_Previews: PreviewProvider {
 //    static var previews: some View {
-//        DialogueCellModel(artWorks: "artWork1", artWorkNames: "LINDA", level: "20", City: "America", isFavourite: false)
+//        DialogueCell(object: dialogueCellArray[index], onFavoriteTap: {})
 //
 //    }
 //}

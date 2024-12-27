@@ -27,7 +27,8 @@ struct MyIkonsView: View {
                     }
                     else{
                         HStack(spacing: 10){
-                            IconInCircleCell(onTap: {},iconName: "bag")
+                            IconInCircleCell(onTap: {
+                            },iconName: "bag")
                             IconInCircleCell(onTap: {},iconName: "arrow.down")
                             IconInCircleCell(onTap: {
                                 viewModel.showAlert = true
@@ -121,7 +122,6 @@ struct MyIkonsView: View {
         .onChange(of: viewModel.dialogueCellArray, perform: { array in
             print(array)
         })
-        
     }
 }
 
