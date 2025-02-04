@@ -71,6 +71,10 @@
 		81E34CE42CCF80B600B298C9 /* PlaylistAiLogoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E34CE32CCF80B600B298C9 /* PlaylistAiLogoText.swift */; };
 		81E34CE62CCF816D00B298C9 /* VideoNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E34CE52CCF816D00B298C9 /* VideoNext.swift */; };
 		81E34CE92CCF9B2300B298C9 /* WelcomePlaylistAi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E34CE82CCF9B2300B298C9 /* WelcomePlaylistAi.swift */; };
+		81E6A10C2D27C2C30008FA5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6A10B2D27C2C30008FA5E /* ContentView.swift */; };
+		81E6A10E2D27C6E80008FA5E /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6A10D2D27C6E80008FA5E /* SideMenuView.swift */; };
+		81E6A1192D2801C20008FA5E /* PrayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6A1182D2801C20008FA5E /* PrayerView.swift */; };
+		81E6A11B2D2805F80008FA5E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6A11A2D2805F80008FA5E /* HomeView.swift */; };
 		81E6B8CB2CAFDC3A00AD66ED /* SwiftThinkingBootcampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6B8CA2CAFDC3A00AD66ED /* SwiftThinkingBootcampApp.swift */; };
 		81E6B8DC2CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6B8DB2CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.swift */; };
 		81E6B8E62CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6B8E52CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests.swift */; };
@@ -192,6 +196,10 @@
 		81E34CE32CCF80B600B298C9 /* PlaylistAiLogoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistAiLogoText.swift; sourceTree = "<group>"; };
 		81E34CE52CCF816D00B298C9 /* VideoNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNext.swift; sourceTree = "<group>"; };
 		81E34CE82CCF9B2300B298C9 /* WelcomePlaylistAi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePlaylistAi.swift; sourceTree = "<group>"; };
+		81E6A10B2D27C2C30008FA5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		81E6A10D2D27C6E80008FA5E /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		81E6A1182D2801C20008FA5E /* PrayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerView.swift; sourceTree = "<group>"; };
+		81E6A11A2D2805F80008FA5E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		81E6B8C72CAFDC3A00AD66ED /* SwiftThinkingBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftThinkingBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E6B8CA2CAFDC3A00AD66ED /* SwiftThinkingBootcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftThinkingBootcampApp.swift; sourceTree = "<group>"; };
 		81E6B8D72CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftThinkingBootcampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -379,11 +387,23 @@
 			path = Onboardings;
 			sourceTree = "<group>";
 		};
+		81E6A1062D27BDFB0008FA5E /* TabBarWithSideMenuDemo */ = {
+			isa = PBXGroup;
+			children = (
+				81E6A10B2D27C2C30008FA5E /* ContentView.swift */,
+				81E6A10D2D27C6E80008FA5E /* SideMenuView.swift */,
+				81E6A11A2D2805F80008FA5E /* HomeView.swift */,
+				81E6A1182D2801C20008FA5E /* PrayerView.swift */,
+			);
+			path = TabBarWithSideMenuDemo;
+			sourceTree = "<group>";
+		};
 		81E6B8BE2CAFDC3A00AD66ED = {
 			isa = PBXGroup;
 			children = (
-				81FC56452CFAEB8900BC2051 /* WeatherApp */,
 				810CC0DF2CF05FAC003E964C /* Assets.xcassets */,
+				81E6A1062D27BDFB0008FA5E /* TabBarWithSideMenuDemo */,
+				81FC56452CFAEB8900BC2051 /* WeatherApp */,
 				810CC0E72CF09FEA003E964C /* MyIconsApp */,
 				81E34CD62CCF602900B298C9 /* PlaylistApplication */,
 				81F9AF9E2CCB8ADC00CC0869 /* OnboardingVideo */,
@@ -761,12 +781,14 @@
 				81FEFD552CBFCE8E007B9526 /* SingleCategory.swift in Sources */,
 				81FEFD532CBFBAD0007B9526 /* AllCatogories.swift in Sources */,
 				81FF0A892CB8E309005CB761 /* ToggleDemo.swift in Sources */,
+				81E6A10E2D27C6E80008FA5E /* SideMenuView.swift in Sources */,
 				81FF0A9C2CB94F25005CB761 /* OnAppearDemo.swift in Sources */,
 				81E34CDD2CCF62A600B298C9 /* PlaylistAI.swift in Sources */,
 				81FC639D2CB1254B0044F7F9 /* Icons.swift in Sources */,
 				810CC0E92CF0A00D003E964C /* MyIkonsView.swift in Sources */,
 				816A1FE42CBD3322007ADF28 /* EnvironmentObjectDemo.swift in Sources */,
 				81E6B8F92CB0135D00AD66ED /* ColorsBootcamp.swift in Sources */,
+				81E6A11B2D2805F80008FA5E /* HomeView.swift in Sources */,
 				8180EA562CD6396C006A4DF8 /* CustomizedPlaylist.swift in Sources */,
 				81D5FF392CB3B4B70063A323 /* SpacerDemo.swift in Sources */,
 				81E6B8F72CB0088200AD66ED /* ShapesBootcamp.swift in Sources */,
@@ -804,6 +826,7 @@
 				816EFCFE2CB407560075A122 /* ForEachLoops.swift in Sources */,
 				8146F8532CF43EA80009D8F8 /* DialogueCell.swift in Sources */,
 				81CA170E2CB5555E00CBFE9F /* BindingDemo.swift in Sources */,
+				81E6A1192D2801C20008FA5E /* PrayerView.swift in Sources */,
 				81429EC72CB6591F0016782D /* TransitionDemo.swift in Sources */,
 				81E34CE92CCF9B2300B298C9 /* WelcomePlaylistAi.swift in Sources */,
 				818E6B962CB68DF400E0982B /* NavigationViewLinkDemo.swift in Sources */,
@@ -812,6 +835,7 @@
 				8108ACA52CEF216D00CAFC25 /* CreateListenMusicView.swift in Sources */,
 				81E34CE22CCF76BD00B298C9 /* CustomButton.swift in Sources */,
 				81429ECB2CB66E090016782D /* PopOverDemo.swift in Sources */,
+				81E6A10C2D27C2C30008FA5E /* ContentView.swift in Sources */,
 				818833DC2CB7FBB70022C412 /* TextEditorDemo.swift in Sources */,
 				81FF0A8D2CB8F8E3005CB761 /* ColorPickerDemo.swift in Sources */,
 				818833D82CB7E4CE0022C412 /* ContextMenuDemo.swift in Sources */,
