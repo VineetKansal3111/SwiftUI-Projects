@@ -76,9 +76,6 @@
 		81E6A1192D2801C20008FA5E /* PrayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6A1182D2801C20008FA5E /* PrayerView.swift */; };
 		81E6A11B2D2805F80008FA5E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6A11A2D2805F80008FA5E /* HomeView.swift */; };
 		81E6B8CB2CAFDC3A00AD66ED /* SwiftThinkingBootcampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6B8CA2CAFDC3A00AD66ED /* SwiftThinkingBootcampApp.swift */; };
-		81E6B8DC2CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6B8DB2CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.swift */; };
-		81E6B8E62CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6B8E52CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests.swift */; };
-		81E6B8E82CAFDC3B00AD66ED /* SwiftThinkingBootcampUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6B8E72CAFDC3B00AD66ED /* SwiftThinkingBootcampUITestsLaunchTests.swift */; };
 		81E6B8F52CAFF30400AD66ED /* TextBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6B8F42CAFF30400AD66ED /* TextBootCamp.swift */; };
 		81E6B8F72CB0088200AD66ED /* ShapesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6B8F62CB0088200AD66ED /* ShapesBootcamp.swift */; };
 		81E6B8F92CB0135D00AD66ED /* ColorsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E6B8F82CB0135D00AD66ED /* ColorsBootcamp.swift */; };
@@ -203,10 +200,7 @@
 		81E6B8C72CAFDC3A00AD66ED /* SwiftThinkingBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftThinkingBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E6B8CA2CAFDC3A00AD66ED /* SwiftThinkingBootcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftThinkingBootcampApp.swift; sourceTree = "<group>"; };
 		81E6B8D72CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftThinkingBootcampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		81E6B8DB2CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftThinkingBootcampTests.swift; sourceTree = "<group>"; };
 		81E6B8E12CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftThinkingBootcampUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		81E6B8E52CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftThinkingBootcampUITests.swift; sourceTree = "<group>"; };
-		81E6B8E72CAFDC3B00AD66ED /* SwiftThinkingBootcampUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftThinkingBootcampUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		81E6B8F42CAFF30400AD66ED /* TextBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootCamp.swift; sourceTree = "<group>"; };
 		81E6B8F62CB0088200AD66ED /* ShapesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesBootcamp.swift; sourceTree = "<group>"; };
 		81E6B8F82CB0135D00AD66ED /* ColorsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsBootcamp.swift; sourceTree = "<group>"; };
@@ -409,8 +403,6 @@
 				81F9AF9E2CCB8ADC00CC0869 /* OnboardingVideo */,
 				81135CB42CBF8D8300043A55 /* QuickBillDemo */,
 				81E6B8C92CAFDC3A00AD66ED /* SwiftThinkingBootcamp */,
-				81E6B8DA2CAFDC3B00AD66ED /* SwiftThinkingBootcampTests */,
-				81E6B8E42CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests */,
 				81E6B8C82CAFDC3A00AD66ED /* Products */,
 				3CA0B02259360FA1C9DE7632 /* Frameworks */,
 				EA60CCA440388F455612CFCA /* Pods */,
@@ -491,23 +483,6 @@
 			children = (
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		81E6B8DA2CAFDC3B00AD66ED /* SwiftThinkingBootcampTests */ = {
-			isa = PBXGroup;
-			children = (
-				81E6B8DB2CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.swift */,
-			);
-			path = SwiftThinkingBootcampTests;
-			sourceTree = "<group>";
-		};
-		81E6B8E42CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests */ = {
-			isa = PBXGroup;
-			children = (
-				81E6B8E52CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests.swift */,
-				81E6B8E72CAFDC3B00AD66ED /* SwiftThinkingBootcampUITestsLaunchTests.swift */,
-			);
-			path = SwiftThinkingBootcampUITests;
 			sourceTree = "<group>";
 		};
 		81F9AF9E2CCB8ADC00CC0869 /* OnboardingVideo */ = {
@@ -864,7 +839,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E6B8DC2CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,8 +846,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E6B8E62CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests.swift in Sources */,
-				81E6B8E82CAFDC3B00AD66ED /* SwiftThinkingBootcampUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,7 +1045,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 90C60A23645E2C9209CFA4AC /* Pods-SwiftThinkingBootcampTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1093,7 +1064,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 670BD831540FD65780AB7B71 /* Pods-SwiftThinkingBootcampTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1113,7 +1083,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65046F901222EFB997C77E0A /* Pods-SwiftThinkingBootcamp-SwiftThinkingBootcampUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1131,7 +1100,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01A7F83ED10742183674E812 /* Pods-SwiftThinkingBootcamp-SwiftThinkingBootcampUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

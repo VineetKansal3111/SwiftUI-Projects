@@ -22,8 +22,8 @@ struct WeatherView: View {
             Text("Daily Hourly Weather")
                 .font(.title)
                 .bold()
-                .frame(width: .infinity,alignment: .center)
-            HStack{
+                .frame(maxWidth: .infinity, alignment: .center)
+            HStack {
                 TextField("Search city", text: $location)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button(action: {

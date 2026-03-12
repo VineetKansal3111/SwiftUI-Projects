@@ -27,15 +27,14 @@ struct MyIkonsView: View {
                     }
                     else{
                         HStack(spacing: 10){
-                            IconInCircleCell(onTap: {
-                            },iconName: "bag")
-                            IconInCircleCell(onTap: {},iconName: "arrow.down")
+                            IconInCircleCell(onTap: {}, iconName: "bag")
+                            IconInCircleCell(onTap: {}, iconName: "arrow.down")
                             IconInCircleCell(onTap: {
                                 viewModel.showAlert = true
-                            },iconName:"slider.vertical.3")
+                            }, iconName:"slider.vertical.3")
                             IconInCircleCell(onTap: {
                                 viewModel.searchSelected = true
-                            },iconName: "magnifyingglass")
+                            }, iconName: "magnifyingglass")
                         } .padding(.bottom)
                     }
                     
