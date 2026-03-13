@@ -17,7 +17,7 @@ struct ColorsBootcamp: View {
              //  )
               //  Color("Color")
                 Color(#colorLiteral(red:0,green:89,blue:34,alpha:1)))
-            .frame(width:100,height:100)
+            .frame(width:100, height:100)
             .shadow(
                 color: Color("Color")
                     .opacity(10), radius: 10,x:10,y: 40)

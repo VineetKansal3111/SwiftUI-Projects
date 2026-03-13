@@ -395,7 +395,6 @@
 		81E6B8BE2CAFDC3A00AD66ED = {
 			isa = PBXGroup;
 			children = (
-				810CC0DF2CF05FAC003E964C /* Assets.xcassets */,
 				81E6A1062D27BDFB0008FA5E /* TabBarWithSideMenuDemo */,
 				81FC56452CFAEB8900BC2051 /* WeatherApp */,
 				810CC0E72CF09FEA003E964C /* MyIconsApp */,
@@ -422,6 +421,8 @@
 		81E6B8C92CAFDC3A00AD66ED /* SwiftThinkingBootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				D715759F2F6438BC000BB79C /* Preview Content */,
+				810CC0DF2CF05FAC003E964C /* Assets.xcassets */,
 				81CA17032CB5351400CBFE9F /* Info.plist */,
 				81E6B8CA2CAFDC3A00AD66ED /* SwiftThinkingBootcampApp.swift */,
 				81E6B8F42CAFF30400AD66ED /* TextBootCamp.swift */,
@@ -473,16 +474,8 @@
 				816A1FE12CBD043D007ADF28 /* ViewModelDemo.swift */,
 				816A1FE32CBD3322007ADF28 /* EnvironmentObjectDemo.swift */,
 				81F9AF9A2CCB72E200CC0869 /* AppStorage.swift */,
-				81E6B8D02CAFDC3B00AD66ED /* Preview Content */,
 			);
 			path = SwiftThinkingBootcamp;
-			sourceTree = "<group>";
-		};
-		81E6B8D02CAFDC3B00AD66ED /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		81F9AF9E2CCB8ADC00CC0869 /* OnboardingVideo */ = {
@@ -516,6 +509,13 @@
 				8195B12E2CFF2C150073B343 /* PostModel.swift */,
 			);
 			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		D715759F2F6438BC000BB79C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		EA60CCA440388F455612CFCA /* Pods */ = {
