@@ -199,8 +199,8 @@
 		81E6A11A2D2805F80008FA5E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		81E6B8C72CAFDC3A00AD66ED /* SwiftThinkingBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftThinkingBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E6B8CA2CAFDC3A00AD66ED /* SwiftThinkingBootcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftThinkingBootcampApp.swift; sourceTree = "<group>"; };
-		81E6B8D72CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftThinkingBootcampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		81E6B8E12CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftThinkingBootcampUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E6B8D72CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftThinkingBootcampTests.xctest; path = "/Users/dev/Downloads/Clone Projects/SwiftUI-Projects/build/Debug-iphoneos/SwiftThinkingBootcamp.app/PlugIns/SwiftThinkingBootcampTests.xctest"; sourceTree = "<absolute>"; };
+		81E6B8E12CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftThinkingBootcampUITests.xctest; path = "/Users/dev/Downloads/Clone Projects/SwiftUI-Projects/build/Debug-iphoneos/SwiftThinkingBootcampUITests-Runner.app/PlugIns/SwiftThinkingBootcampUITests.xctest"; sourceTree = "<absolute>"; };
 		81E6B8F42CAFF30400AD66ED /* TextBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootCamp.swift; sourceTree = "<group>"; };
 		81E6B8F62CB0088200AD66ED /* ShapesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesBootcamp.swift; sourceTree = "<group>"; };
 		81E6B8F82CB0135D00AD66ED /* ColorsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsBootcamp.swift; sourceTree = "<group>"; };
@@ -412,8 +412,6 @@
 			isa = PBXGroup;
 			children = (
 				81E6B8C72CAFDC3A00AD66ED /* SwiftThinkingBootcamp.app */,
-				81E6B8D72CAFDC3B00AD66ED /* SwiftThinkingBootcampTests.xctest */,
-				81E6B8E12CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
