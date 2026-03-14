@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CatTextField: View {
     @Binding var textFieldText: String
+    let onTap: ()->()
     var body: some View {
         HStack{
             TextField(text: $textFieldText , label: {
@@ -19,6 +20,9 @@ struct CatTextField: View {
            
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.black)
+                .onTapGesture {
+                    onTap()
+                }
         }
         .padding()
         .background(Color.white)

@@ -12,12 +12,12 @@ struct CoinCell: View {
     
     var body: some View {
         ZStack{
-            HStack{
+            HStack {
                 Image("Vector")
                 if(isSelectedCoin == false){
                     HStack{
-                        Image("starImg")
-                        Text("100")
+//                        Image("starImg")
+                        Text("10")
                         Image("arrowRight")
                             .onTapGesture {
                                 isSelectedCoin = true

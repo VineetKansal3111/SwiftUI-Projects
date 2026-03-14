@@ -22,7 +22,9 @@ struct MyCatsView: View {
                         .foregroundColor(.white)
                         .padding(.vertical,10)
                     if viewModel.searchSelected == true {
-                        CatTextField(textFieldText: $viewModel.textFieldtext)
+                        CatTextField(textFieldText: $viewModel.textFieldtext,onTap: {
+                            viewModel.searchSelected.toggle()
+                        })
                             .padding(.bottom)
                     }
                     else{

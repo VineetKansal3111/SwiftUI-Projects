@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct SwiftThinkingBootcampApp: App {
-
     var body: some Scene {
         WindowGroup {
             MyCatsMarketView()
