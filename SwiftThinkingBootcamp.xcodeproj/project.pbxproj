@@ -229,9 +229,9 @@
 		81FF0A962CB9324A005CB761 /* PageTabViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTabViewDemo.swift; sourceTree = "<group>"; };
 		81FF0A9B2CB94F25005CB761 /* OnAppearDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAppearDemo.swift; sourceTree = "<group>"; };
 		90C60A23645E2C9209CFA4AC /* Pods-SwiftThinkingBootcampTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftThinkingBootcampTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftThinkingBootcampTests/Pods-SwiftThinkingBootcampTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D7A615882F65266C00E51762 /* SwiftThinkingBootcampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftThinkingBootcampTests.xctest; path = "/Users/dev/Downloads/Clone Projects/SwiftUI-Projects/build/Debug-iphoneos/SwiftThinkingBootcamp.app/PlugIns/SwiftThinkingBootcampTests.xctest"; sourceTree = "<absolute>"; };
-		D7A615892F65266C00E51762 /* SwiftThinkingBootcampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftThinkingBootcampUITests.xctest; path = "/Users/dev/Downloads/Clone Projects/SwiftUI-Projects/build/Debug-iphoneos/SwiftThinkingBootcampUITests-Runner.app/PlugIns/SwiftThinkingBootcampUITests.xctest"; sourceTree = "<absolute>"; };
 		D7A6158A2F65285500E51762 /* WeatherViewModell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModell.swift; sourceTree = "<group>"; };
+		D7A615922F6542E400E51762 /* SwiftThinkingBootcampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftThinkingBootcampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7A615932F6542E400E51762 /* SwiftThinkingBootcampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftThinkingBootcampUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA797175AD9839FB3D27CED4 /* Pods-SwiftThinkingBootcamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftThinkingBootcamp.release.xcconfig"; path = "Target Support Files/Pods-SwiftThinkingBootcamp/Pods-SwiftThinkingBootcamp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -414,6 +414,8 @@
 			isa = PBXGroup;
 			children = (
 				81E6B8C72CAFDC3A00AD66ED /* SwiftThinkingBootcamp.app */,
+				D7A615922F6542E400E51762 /* SwiftThinkingBootcampTests.xctest */,
+				D7A615932F6542E400E51762 /* SwiftThinkingBootcampUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -421,7 +423,6 @@
 		81E6B8C92CAFDC3A00AD66ED /* SwiftThinkingBootcamp */ = {
 			isa = PBXGroup;
 			children = (
-				D7A6158D2F6532C500E51762 /* Preview Content */,
 				810CC0DF2CF05FAC003E964C /* Assets.xcassets */,
 				81CA17032CB5351400CBFE9F /* Info.plist */,
 				81E6B8CA2CAFDC3A00AD66ED /* SwiftThinkingBootcampApp.swift */,
@@ -512,13 +513,6 @@
 			path = WeatherApp;
 			sourceTree = "<group>";
 		};
-		D7A6158D2F6532C500E51762 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		EA60CCA440388F455612CFCA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,7 +563,7 @@
 			);
 			name = SwiftThinkingBootcampTests;
 			productName = SwiftThinkingBootcampTests;
-			productReference = D7A615882F65266C00E51762 /* SwiftThinkingBootcampTests.xctest */;
+			productReference = D7A615922F6542E400E51762 /* SwiftThinkingBootcampTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		81E6B8E02CAFDC3B00AD66ED /* SwiftThinkingBootcampUITests */ = {
@@ -588,7 +582,7 @@
 			);
 			name = SwiftThinkingBootcampUITests;
 			productName = SwiftThinkingBootcampUITests;
-			productReference = D7A615892F65266C00E51762 /* SwiftThinkingBootcampUITests.xctest */;
+			productReference = D7A615932F6542E400E51762 /* SwiftThinkingBootcampUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -989,7 +983,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftThinkingBootcamp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftThinkingBootcamp/Info.plist;
@@ -1020,7 +1014,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftThinkingBootcamp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftThinkingBootcamp/Info.plist;
