@@ -10,7 +10,7 @@ import SwiftUI
 struct ForEachLoops: View {
     var body: some View {
         VStack{
-            ForEach(0..<11){index in
+            ForEach(0..<11){ index in
                 
                 Text("ok: \(index)")
                 

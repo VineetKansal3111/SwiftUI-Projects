@@ -12,7 +12,7 @@ struct ThreeButtonsView: View {
     var buttonTapped: (String) -> Void
     var body: some View {
         ForEach(title,id:\.self){ button in
-            HStack{
+            HStack {
                 Button(action: {
                     buttonTapped(button)
                 }, label: {

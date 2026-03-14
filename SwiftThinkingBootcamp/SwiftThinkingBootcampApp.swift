@@ -11,8 +11,8 @@ import SwiftUI
 struct SwiftThinkingBootcampApp: App {
     var body: some Scene {
         WindowGroup {
-            MyCatsMarketView()
-//            MyCatsView()
+//            MyCatsMarketView()
+            MyCatsView()
         }
     }
 }

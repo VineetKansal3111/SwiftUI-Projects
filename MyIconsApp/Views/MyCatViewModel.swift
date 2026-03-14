@@ -13,18 +13,18 @@ class MyCatViewModel: ObservableObject{
     @Published var searchSelected : Bool = false
     @Published var showAlert: Bool = false
     
-    var columns = Array(repeating: GridItem(.flexible(minimum: 150, maximum: 200)), count: 2)
+    var columns = Array(repeating: GridItem(.flexible(minimum: 150, maximum: 200), spacing: 10), count: 2)
     @State var isSelected: Bool = false
     var columnsSecond = Array(repeating: GridItem(.flexible()), count: 2)
    
     
     @Published var dialogueCellArray : [CatsInfo] = [
         CatsInfo(artWorks: "artWork1", artWorkNames: "LINDA", level: "27", City: "American", isFavourite: false),
-        CatsInfo(artWorks: "artWork2", artWorkNames: "GARFIELD", level:"21", City: "THAI", isFavourite: false),
-        CatsInfo(artWorks: "artWork3", artWorkNames: "PAUL", level: "22", City: "American", isFavourite: false),
-        CatsInfo(artWorks: "artWork4", artWorkNames: "MARY", level: "20", City: "American", isFavourite: false),
-        CatsInfo(artWorks: "artWork5", artWorkNames: "ANNA", level: "24", City: "Indian", isFavourite: false),
-        CatsInfo(artWorks: "artWork6", artWorkNames: "JOHN", level: "24", City: "American", isFavourite: false)
+        CatsInfo(artWorks: "artWork1", artWorkNames: "GARFIELD", level:"21", City: "THAI", isFavourite: false),
+        CatsInfo(artWorks: "artWork1", artWorkNames: "PAUL", level: "22", City: "American", isFavourite: false),
+        CatsInfo(artWorks: "artWork1", artWorkNames: "MARY", level: "20", City: "American", isFavourite: false),
+        CatsInfo(artWorks: "artWork1", artWorkNames: "ANNA", level: "24", City: "Indian", isFavourite: false),
+        CatsInfo(artWorks: "artWork1", artWorkNames: "JOHN", level: "24", City: "American", isFavourite: false)
     ]
     
     @Published var selectedFilter : [FilterInfo] = []

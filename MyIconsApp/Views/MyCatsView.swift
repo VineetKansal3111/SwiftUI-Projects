@@ -14,20 +14,21 @@ struct MyCatsView: View {
     var body: some View {
         ZStack{
             ScrollView(showsIndicators: false){
-                VStack{
+                VStack {
                     CoinCell(isSelectedCoin: false)
                         .padding(.top,40)
+                    
                     Text("Select an Cat to chat")
-                        .font(.system(size: 18,weight: .semibold))
+                        .font(.system(size: 18, weight: .semibold))
                         .foregroundColor(.white)
-                        .padding(.vertical,10)
+                        .padding(.vertical, 10)
+                    
                     if viewModel.searchSelected == true {
                         CatTextField(textFieldText: $viewModel.textFieldtext,onTap: {
                             viewModel.searchSelected.toggle()
                         })
                             .padding(.bottom)
-                    }
-                    else{
+                    } else {
                         HStack(spacing: 10){
                             IconInCircleCell(onTap: {}, iconName: "bag")
                             IconInCircleCell(onTap: {}, iconName: "arrow.down")
@@ -37,7 +38,8 @@ struct MyCatsView: View {
                             IconInCircleCell(onTap: {
                                 viewModel.searchSelected = true
                             }, iconName: "magnifyingglass")
-                        } .padding(.bottom)
+                        }
+                        .padding(.bottom)
                     }
                     
                     LazyVGrid(columns: viewModel.columns, spacing: 10) {
@@ -51,7 +53,9 @@ struct MyCatsView: View {
                         Spacer()
                     }
                 }
+                .padding(.horizontal, 16)
             }
+            
             if(viewModel.showAlert == true) {
                 VStack{
                     Text("Filter")
