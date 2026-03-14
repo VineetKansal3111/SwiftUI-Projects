@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct MyIkonsView: View {
+struct MyCatsView: View {
     
-    @StateObject var viewModel = MyIkonsViewModel()
+    @StateObject var viewModel = MyCatViewModel()
     
     var body: some View {
         ZStack{
@@ -17,12 +17,12 @@ struct MyIkonsView: View {
                 VStack{
                     CoinCell(isSelectedCoin: false)
                         .padding(.top,40)
-                    Text("Select an Ikon to chat")
+                    Text("Select an Cat to chat")
                         .font(.system(size: 18,weight: .semibold))
                         .foregroundColor(.white)
                         .padding(.vertical,10)
                     if viewModel.searchSelected == true {
-                        IkonTextField(textFieldText: $viewModel.textFieldtext)
+                        CatTextField(textFieldText: $viewModel.textFieldtext)
                             .padding(.bottom)
                     }
                     else{
@@ -126,6 +126,6 @@ struct MyIkonsView: View {
 
 struct MyIconsView_Previews: PreviewProvider {
     static var previews: some View {
-        MyIkonsView()
+        MyCatsView()
     }
 }

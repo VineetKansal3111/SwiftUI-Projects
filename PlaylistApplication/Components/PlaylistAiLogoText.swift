@@ -1,5 +1,5 @@
 //
-//  PlaylistAiLogoText.swift
+//  TuneListLogoText.swift
 //  SwiftThinkingBootcamp
 //
 //  Created by IOS on 28/10/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PlaylistAiLogoText: View {
+struct TuneAILogoText: View {
     var body: some View {
         HStack(spacing:2){
             Image("LogoImg")
@@ -30,8 +30,8 @@ struct PlaylistAiLogoText: View {
     }
 }
 
-struct PlaylistAiLogoText_Previews: PreviewProvider {
+struct TuneAILogoText_Previews: PreviewProvider {
     static var previews: some View {
-        PlaylistAiLogoText()
+        TuneAILogoText()
     }
 }

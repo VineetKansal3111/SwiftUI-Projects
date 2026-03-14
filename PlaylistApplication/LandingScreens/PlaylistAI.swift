@@ -1,5 +1,5 @@
 //
-//  PlaylistAI.swift
+//  TuneAI.swift
 //  SwiftThinkingBootcamp
 //
 //  Created by IOS on 28/10/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PlaylistAI: View {
+struct TuneAI: View {
     @State private var isActive : Bool = false
     var body: some View {
         if isActive{
@@ -20,7 +20,7 @@ struct PlaylistAI: View {
                         colors: [Color.purple,Color.black,Color.blue,]),
                     center: .bottom,
                     angle:.degrees(90))
-                PlaylistAiLogoText().onAppear{
+                TuneAILogoText().onAppear{
                     DispatchQueue.main.asyncAfter(deadline: .now()+3.0){
                         withAnimation{
                             isActive = true}
@@ -31,8 +31,8 @@ struct PlaylistAI: View {
     }
 }
 
-struct PlaylistAI_Previews: PreviewProvider {
+struct TuneAI_Previews: PreviewProvider {
     static var previews: some View {
-        PlaylistAI()
+        TuneAI()
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class MyIkonsViewModel: ObservableObject{
+class MyCatViewModel: ObservableObject{
     
     @Published var textFieldtext: String = ""
     @Published var searchSelected : Bool = false
@@ -18,13 +18,13 @@ class MyIkonsViewModel: ObservableObject{
     var columnsSecond = Array(repeating: GridItem(.flexible()), count: 2)
    
     
-    @Published var dialogueCellArray : [ikonInfo] = [
-        ikonInfo(artWorks: "artWork1", artWorkNames: "LINDA", level: "27", City: "American", isFavourite: false),
-        ikonInfo(artWorks: "artWork2", artWorkNames: "GARFIELD", level:"21", City: "THAI", isFavourite: false),
-        ikonInfo(artWorks: "artWork3", artWorkNames: "PAUL", level: "22", City: "American", isFavourite: false),
-        ikonInfo(artWorks: "artWork4", artWorkNames: "MARY", level: "20", City: "American", isFavourite: false),
-        ikonInfo(artWorks: "artWork5", artWorkNames: "ANNA", level: "24", City: "Indian", isFavourite: false),
-        ikonInfo(artWorks: "artWork6", artWorkNames: "JOHN", level: "24", City: "American", isFavourite: false)
+    @Published var dialogueCellArray : [CatsInfo] = [
+        CatsInfo(artWorks: "artWork1", artWorkNames: "LINDA", level: "27", City: "American", isFavourite: false),
+        CatsInfo(artWorks: "artWork2", artWorkNames: "GARFIELD", level:"21", City: "THAI", isFavourite: false),
+        CatsInfo(artWorks: "artWork3", artWorkNames: "PAUL", level: "22", City: "American", isFavourite: false),
+        CatsInfo(artWorks: "artWork4", artWorkNames: "MARY", level: "20", City: "American", isFavourite: false),
+        CatsInfo(artWorks: "artWork5", artWorkNames: "ANNA", level: "24", City: "Indian", isFavourite: false),
+        CatsInfo(artWorks: "artWork6", artWorkNames: "JOHN", level: "24", City: "American", isFavourite: false)
     ]
     
     @Published var selectedFilter : [FilterInfo] = []
@@ -37,7 +37,7 @@ class MyIkonsViewModel: ObservableObject{
         }
     }
     
-    var filteredNames: [ikonInfo] {
+    var filteredNames: [CatsInfo] {
         var filteredArray = dialogueCellArray
         
         if selectedFilter.contains(where: { $0.title == "My Favourites" }) {

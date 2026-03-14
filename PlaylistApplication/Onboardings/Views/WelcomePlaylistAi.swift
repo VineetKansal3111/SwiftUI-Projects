@@ -1,5 +1,5 @@
 //
-//  WelcomePlaylistAi.swift
+//  WelcomeTuneAI.swift
 //  SwiftThinkingBootcamp
 //
 //  Created by IOS on 28/10/24.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct WelcomePlaylistAi: View {
+struct WelcomeTuneAI: View {
     var body: some View {
         VStack(alignment: .leading,spacing: 20){
             Spacer()
-            PlaylistAiLogoText()
-            Text("Welcome  to \n PlaylistAi")
+            TuneAILogoText()
+            Text("Welcome  to \n TuneAI")
                 .bold()
                 .font(.system(size: 40))
                 .foregroundColor(.white)
@@ -32,8 +32,8 @@ struct WelcomePlaylistAi: View {
     }
 }
 
-struct WelcomePlaylistAi_Previews: PreviewProvider {
+struct WelcomeTuneAI_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomePlaylistAi()
+        WelcomeTuneAI()
     }
 }

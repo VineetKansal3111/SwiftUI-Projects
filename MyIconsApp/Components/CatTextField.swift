@@ -1,5 +1,5 @@
 //
-//  IkonTextField.swift
+//  CatsTextField.swift
 //  SwiftThinkingBootcamp
 //
 //  Created by IOS on 25/11/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IkonTextField: View {
+struct CatTextField: View {
     @Binding var textFieldText: String
     var body: some View {
         HStack{
@@ -27,9 +27,9 @@ struct IkonTextField: View {
     }
 }
 
-//struct IkonTextField_Previews: PreviewProvider {
+//struct CatsTextField_Previews: PreviewProvider {
 //    static var previews: some View {
-//        IkonTextField(textFieldText: "")
+//        CatsTextField(textFieldText: "")
 //            .preferredColorScheme(.dark)
 //    }
 //}

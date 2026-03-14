@@ -34,7 +34,7 @@ struct CoinCell: View {
             .padding()
             
             if(isSelectedCoin == false){
-                Text("My Ikons")
+                Text("My Cats")
                     .foregroundColor(.white)
                     .font(.system(size: 39,weight: .semibold))
                     //.frame(maxWidth: .infinity,alignment: .center)

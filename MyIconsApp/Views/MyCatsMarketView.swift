@@ -1,5 +1,5 @@
 //
-//  MyIkonMarketView.swift
+//  MyCatsMarketView.swift
 //  SwiftThinkingBootcamp
 //
 //  Created by IOS on 26/12/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MyIkonMarketView: View {
+struct MyCatsMarketView: View {
     var columns = Array(repeating: GridItem(.flexible(),spacing: 10), count: 2)
     
     var body: some View {
@@ -15,7 +15,7 @@ struct MyIkonMarketView: View {
             
             headerView
             
-            Text("Buy or rent an Ikon")
+            Text("Buy or rent an Cats")
                 .foregroundColor(.white)
                 .font(.system(size: 16,weight:.regular))
             
@@ -29,7 +29,7 @@ struct MyIkonMarketView: View {
             ScrollView(showsIndicators: false){
                 LazyVGrid(columns: columns, spacing: 10){
                     ForEach(0..<8, id: \.self) { _ in
-                        MyIkonCell()
+                        MyCatCell()
                     }
                 }
             }
@@ -92,8 +92,8 @@ struct MyIkonMarketView: View {
     
 }
 
-struct MyIkonMarketView_Previews: PreviewProvider {
+struct MyCatsMarketView_Previews: PreviewProvider {
     static var previews: some View {
-        MyIkonMarketView()
+        MyCatsMarketView()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  IkonInfo.swift
+//  CatInfo.swift
 //  SwiftThinkingBootcamp
 //
 //  Created by IOS on 29/11/24.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct ikonInfo:Identifiable,Equatable{
+struct CatsInfo: Identifiable, Equatable {
     var id = UUID().uuidString
     var artWorks: String
     var artWorkNames: String

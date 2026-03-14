@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DialogueCell: View {
- @State var object: ikonInfo
+ @State var object: CatsInfo
     var onFavoriteTap: ()->()
     var body: some View {
         

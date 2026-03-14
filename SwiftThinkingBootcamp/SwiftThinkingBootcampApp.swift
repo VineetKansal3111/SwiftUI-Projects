@@ -12,13 +12,13 @@ struct SwiftThinkingBootcampApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MyIkonMarketView()
-//            MyIkonsView()
+            MyCatsMarketView()
+//            MyCatsView()
         }
     }
 }
-//            MyIkonMarketView() -> UI DESIGN OF MARKET PLACE. -A
-//            PlaylistAI() -> For OnBoarding. -A
+//            MyCatsMarketView() -> UI DESIGN OF MARKET PLACE. -A
+//            TuneAI() -> For OnBoarding. -A
 //            CreateListenMusicView() -> UI DESIGN OF PLAYLIST APP. -A
 //            SelectedArtistView() -> UI DESIGN OF PLAYLIST APP. -B
 //            WeatherView() -> Weather App UI DESIGN. -B

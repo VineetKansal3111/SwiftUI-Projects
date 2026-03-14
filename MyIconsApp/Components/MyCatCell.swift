@@ -1,5 +1,5 @@
 //
-//  MyIkonCell.swift
+//  MyCatsCell.swift
 //  SwiftThinkingBootcamp
 //
 //  Created by IOS on 26/12/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MyIkonCell: View {
+struct MyCatCell: View {
     @State var isHeartFill: Bool = false
     
     var body: some View {
@@ -56,7 +56,7 @@ struct MyIkonCell: View {
                 .resizable()
                 .frame(maxWidth:223, maxHeight: 140)
             
-            Text("IKON NAME")
+            Text("Cats NAME")
                 .foregroundColor(.white)
                 .font(.system(size:17))
             
@@ -108,8 +108,8 @@ struct MyIkonCell: View {
     }
 }
 
-struct MyIkonCell_Previews: PreviewProvider {
+struct MyCatCell_Previews: PreviewProvider {
     static var previews: some View {
-        MyIkonCell()
+        MyCatCell()
     }
 }

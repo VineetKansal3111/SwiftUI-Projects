@@ -32,7 +32,7 @@ struct VideoNext: View {
                     .background(Color.white.opacity(0.3))
                     .cornerRadius(20)
                     Spacer()
-                    NavigationLink(destination: WelcomePlaylistAi(), label: {
+                    NavigationLink(destination: WelcomeTuneAI(), label: {
                         CustomButton(width: .infinity, height: 60, buttonColor: Color.pink, title: "Next")
 
                     })

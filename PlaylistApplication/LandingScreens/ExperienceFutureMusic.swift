@@ -20,7 +20,7 @@ struct ExperienceFutureMusic: View {
                         CustomButton(width: 100, height: 50,buttonColor:Color.pink, title: "Continue")
                     })
                     Spacer()
-                    PlaylistAiLogoText()
+                    TuneAILogoText()
                         .padding(.bottom)
                 }
             }
