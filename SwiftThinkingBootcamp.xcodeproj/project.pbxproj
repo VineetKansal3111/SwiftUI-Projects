@@ -421,7 +421,7 @@
 		81E6B8C92CAFDC3A00AD66ED /* SwiftThinkingBootcamp */ = {
 			isa = PBXGroup;
 			children = (
-				D7A6158C2F6531DA00E51762 /* Preview Content */,
+				D7A6158D2F6532C500E51762 /* Preview Content */,
 				810CC0DF2CF05FAC003E964C /* Assets.xcassets */,
 				81CA17032CB5351400CBFE9F /* Info.plist */,
 				81E6B8CA2CAFDC3A00AD66ED /* SwiftThinkingBootcampApp.swift */,
@@ -512,7 +512,7 @@
 			path = WeatherApp;
 			sourceTree = "<group>";
 		};
-		D7A6158C2F6531DA00E51762 /* Preview Content */ = {
+		D7A6158D2F6532C500E51762 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
 			);
