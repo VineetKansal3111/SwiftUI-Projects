@@ -12,9 +12,8 @@ struct SwiftThinkingBootcampApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            MyIkonMarketView()
+            MyIkonMarketView()
 //            MyIkonsView()
-            WeatherView()
         }
     }
 }

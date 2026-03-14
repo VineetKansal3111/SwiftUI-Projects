@@ -5,119 +5,184 @@
 //  Created by IOS on 30/11/24.
 //
 
-import CoreLocation
 import SwiftUI
 
 struct WeatherView: View {
+    @StateObject private var vm = WeatherViewModel()
     @State private var location: String = ""
-    @State var cityName: Bool = false
-    @State var forecast: Forecast? = nil
-    let dateFormatter = DateFormatter()
-    init(){
-        dateFormatter.dateFormat = "E, MMM d, h:mm a"
-    }
-   
+
+    private let dateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "E, MMM d, h:mm a"
+        return df
+    }()
+    private let dayFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "EEEE, MMM d"
+        return df
+    }()
+
     var body: some View {
-        VStack{
-            Text("Daily Hourly Weather")
-                .font(.title)
-                .bold()
-                .frame(maxWidth: .infinity, alignment: .center)
-            HStack {
-                TextField("Search city", text: $location)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                Button(action: {
-                    getWeatherForecast(for: location)
-                }, label: {
-                    Image(systemName: "magnifyingglass")
-                        .font(.title)
-                })
-            }
-            .padding()
-            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.blue,lineWidth: 2))
-            .padding(.horizontal)
-            
-            
-            if let forecast = forecast {
-                List(forecast.list,id:\.dt){ day in
-                    VStack(alignment: .leading){
-                        Text(dateFormatter.string(from: day.dt))
-                        //Text("\(day.dt)")
-                        HStack{
-                            Image(systemName: "sun.max")
-                                .font(.title)
-                                .foregroundColor(.yellow)
-                                .frame(width: 50,height: 50)
-                                .background(Color.blue)
-                                .cornerRadius(15)
-                            VStack(alignment: .leading){
-                                Text("Temprature: \(day.main.temp - 273,specifier: "%.0f" )C")
-                                Text("description: \(day.weather[0].description)")
-                                Text("Humidity: \(day.main.humidity)")
-                                
+        NavigationView {
+            VStack(spacing: 16) {
+                // Search bar
+                HStack(spacing: 12) {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.secondary)
+                        TextField("Search city (e.g. London)", text: $location)
+                            .textInputAutocapitalization(.words)
+                            .disableAutocorrection(true)
+                            .onSubmit {
+                                Task { await vm.fetchForecast(for: location) }
                             }
+                    }
+                    .padding(10)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color(.secondarySystemBackground))
+                    )
+
+                    Button(action: { Task { await vm.fetchForecast(for: location) } }) {
+                        Text("Search")
+                            .bold()
+                            .frame(minWidth: 70)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .disabled(location.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                }
+                .padding(.horizontal)
+                .padding(.top)
+
+                Group {
+                    if vm.isLoading {
+                        VStack(spacing: 8) {
+                            ProgressView()
+                            Text("Loading forecast...")
+                                .foregroundColor(.secondary)
+                                .font(.subheadline)
                         }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    } else if let error = vm.errorMessage {
+                        VStack(spacing: 12) {
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .resizable()
+                                .frame(width: 60, height: 60)
+                                .foregroundColor(.orange)
+                            Text(error)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.red)
+                        }
+                        .padding()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    } else if let forecast = vm.forecast {
+                        ScrollView {
+                            LazyVStack(spacing: 14, pinnedViews: .sectionHeaders) {
+                                ForEach(groupedEntries(forecast.list), id: \.day) { group in
+                                    Section(header: sectionHeader(title: group.day)) {
+                                        ForEach(group.entries) { entry in
+                                            forecastRow(entry: entry)
+                                                .padding(.horizontal)
+                                        }
+                                    }
+                                }
+                            }
+                            .padding(.vertical)
+                        }
+                    } else {
+                        VStack(spacing: 12) {
+                            Image(systemName: "cloud.sun.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 120, height: 120)
+                                .foregroundColor(.blue)
+                            Text("Search Weather Hourly")
+                                .font(.title2)
+                                .foregroundColor(.secondary)
+                            Text("Enter a city above to load forecast data")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
                 }
+                .animation(.default, value: vm.forecast?.list.count)
+
             }
-            if cityName == true {
-                VStack(alignment: .center){
-                    Image(systemName: "magnifyingglass")
+            .navigationTitle("Forecast")
+            .toolbar { ToolbarItem(placement: .navigationBarTrailing) {
+                if vm.forecast != nil {
+                    Button(action: { Task { await vm.fetchForecast(for: location) }}) {
+                        Image(systemName: "arrow.clockwise")
+                    }
+                }
+            }}
+        }
+        .navigationViewStyle(.stack)
+    }
+
+    // MARK: - Subviews
+    @ViewBuilder
+    private func sectionHeader(title: String) -> some View {
+        ZStack(alignment: .leading) {
+            Rectangle()
+                .fill(Color(.systemBackground))
+            Text(title)
+                .font(.headline)
+                .padding(.leading)
+        }
+        .frame(height: 42)
+    }
+
+    @ViewBuilder
+    private func forecastRow(entry: Entry) -> some View {
+        HStack(spacing: 12) {
+            AsyncImage(url: entry.weather.first?.iconURL) { phase in
+                if let img = phase.image {
+                    img
                         .resizable()
-                        .frame(width:100,height: 100)
-                        .foregroundColor(.gray)
-                    Text("No Record Found")
-                        .font(.title)
-                        .foregroundColor(.gray)
+                        .scaledToFill()
+                } else if phase.error != nil {
+                    Image(systemName: "photo")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.secondary)
+                } else {
+                    ProgressView()
                 }
             }
-            else{
-                VStack(alignment: .center){
-                    Image(systemName: "magnifyingglass")
-                        .resizable()
-                        .frame(width:100,height: 100)
-                        .foregroundColor(.gray)
-                    Text("Search Weather Hourly")
-                        .font(.title)
-                        .foregroundColor(.gray)
-                }
+            .frame(width: 56, height: 56)
+            .background(Color(.secondarySystemFill))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text(dateFormatter.string(from: entry.dt))
+                    .font(.subheadline)
+                Text(entry.weather.first?.description?.capitalized ?? "-")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
+            Spacer()
+            VStack(alignment: .trailing, spacing: 4) {
+                Text(String(format: "%.0f°C", entry.main.tempCelsius))
+                    .font(.headline)
+                Text("Humidity: \(entry.main.humidity)%")
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
             }
         }
-        .padding(.horizontal)
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color(.secondarySystemBackground))
+        )
     }
-    
-    
-    func getWeatherForecast(for location: String){
-        let apiService =  APIService.shared
-        CLGeocoder().geocodeAddressString(location) { (placemarks, error) in
-            if let error = error{
-                print(error.localizedDescription)
-                cityName = true
-            }
-            if let lat = placemarks?.first?.location?.coordinate.latitude,
-               let log = placemarks?.first?.location?.coordinate.longitude{
-                apiService.getJSON(urlString:
-                                    "https://api.openweathermap.org/data/2.5/forecast?lat=\(lat)&lon=\(log)&appid=4dac9a46a871263f8df3df1c18d0b500",
-                                   dateDecodingStrategy: .secondsSince1970) { (result: Result<Forecast, APIService.APIError>) in
-                    switch result {
-                    case .success(let forecast):
-                        self.forecast = forecast
-                        //    for day in forecast.list {
-                        //           print(dateFormatter.string(from: day.dt))
-                        //           print("Date: \(day.dt)")
-                        //           print("Temp: \(day.main.temp)")
-                        //           print("Humidity: \(day.main.humidity)")
-                        //           print("Icon URL: \(day.weather.first?.weatherIconURL)")
-                        //           print(location)
-                        //                        }
-                    case .failure(let apiError):
-                        switch apiError {
-                        case .error(let errorString):
-                            print("API Error: \(errorString)")
-                        }
-                    }
-                }
-            }
+
+    private func groupedEntries(_ entries: [Entry]) -> [(day: String, entries: [Entry])] {
+        let grouped = Dictionary(grouping: entries) { Calendar.current.startOfDay(for: $0.dt) }
+        let sortedDates = grouped.keys.sorted()
+        return sortedDates.map { date in
+            (day: dayFormatter.string(from: date), entries: grouped[date]!.sorted { $0.dt < $1.dt })
         }
     }
 }
