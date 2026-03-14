@@ -12,7 +12,7 @@ struct SwiftThinkingBootcampApp: App {
     var body: some Scene {
         WindowGroup {
 //            MyCatsMarketView()
-            MyCatsView()
+//            MyCatsView()
         }
     }
 }
