@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftThinkingBootcampApp: App {
     var body: some Scene {
         WindowGroup {
-//            MyCatsMarketView()
+            MyCatsMarketView()
 //            MyCatsView()
         }
     }
@@ -20,6 +20,6 @@ struct SwiftThinkingBootcampApp: App {
 //            TuneAI() -> For OnBoarding. -A
 //            CreateListenMusicView() -> UI DESIGN OF PLAYLIST APP. -A
 //            SelectedArtistView() -> UI DESIGN OF PLAYLIST APP. -B
-//            WeatherView() -> Weather App UI DESIGN. -B
+//            WeatherView() -> Weather App UI DESIGN. -A
 //            ContentView() -> This is TABBAR and Menu Demo. -B
 
